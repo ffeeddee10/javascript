@@ -43,28 +43,21 @@ let cash = parseInt(
   prompt('¿Paga en Efectivo? si - no')
 )
 
-function preciodescuento() {
-  let descuento = 0
-  if (cash  === 'si') {
-    descuento = descuento + 0.9
-  }
-  else if (cash  === 'no') {
-    descuento = descuento + 0
-  }
-  else {
-    cash = parseInt(prompt('ingrese un numero valido'))
-  }
 
-
-  let resultado = totalcompra * descuento
-  return resultado
-
-
+let descuento = 0
+if (seguircomprando === 'si') {
+  descuento = descuento + 0.9
+}
+else if (cash === 'no') {
+  descuento = descuento + 0
+}
+else {
+  cash = parseInt(prompt('ingrese un numero valido'))
 }
 
-preciodescuento()
+let resultado = totalcompra * descuento
 
-alert('valor final es' + resultado)
+alert('valor final es ' + resultado)
 
 
 /*
