@@ -45,7 +45,8 @@ let cash = parseInt(
 
 
 let descuento = 0
-if (seguircomprando === 'si') {
+
+if (cash === 'si') {
   descuento = descuento + 0.9
 }
 else if (cash === 'no') {
