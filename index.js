@@ -39,9 +39,7 @@ while (seguircomprando === true) {
 }
 alert('el valor es ' + totalcompra)
 
-let cash = parseInt(
-  prompt('¿Paga en Efectivo? si - no')
-)
+let cash = prompt('¿Paga en Efectivo? si - no')
 
 function calculandodescuento(precio) {
 
@@ -51,66 +49,36 @@ function calculandodescuento(precio) {
     descuento = 0.9
   }
   else if (cash == 'no') {
-    descuento = 0
+    descuento = 1
   }
   else {
-    cash = parseInt(prompt('ingrese un numero valido'))
+    cash = prompt('ingrese un numero valido')
   }
   let resultado = precio * descuento
-  precio = precio + resultado
-  return precio
+
+  return resultado
 }
 let preciofinal = calculandodescuento(totalcompra)
 
 
 
-alert('valor final es ' + preciofinal)
+alert('tu compra total es ' + preciofinal)
 
-/*
-function calcularImpuestos(precio) {
-  let impuesto = 0 
-  if (precio <= 300) {
-     impuesto = 10 } 
-     else if (precio >= 400 || precio <= 700) {
-       impuesto = 20 } 
-       else if (precio >= 800) {
-         impuesto = 25 } 
-         else { 
-          alert(“guau no puedo calcular los impuestos”) 
-        } let valorDelImpuesto = precio * (impuesto / 100) 
-        precio = precio + valorDelImpuesto return precio }
-let valorConImpuesto = calcularImpuestos(precioTotal)
 
-alert(“el valor de tu producto con impuestos incluidos es de”+valorConImpuesto)
-*/
-
-/*
-
-let descuento = 0
-while (cash === 'si') {
-  if (cash === 'si'){
-
-    descuento = descuento + 0.9 
-  }
-  else if ( cash === 'no') {
-
-    descuento = descuento + 0 
-  }
-  else {
-    alert (parseInt(prompt('ingrese un numero valido')))
-  }
-  
+function tortas (nombre, relleno, kilos, recubierto) {
+  this.nombre = nombre
+  this.relleno = relleno
+  this.kilos = kilos
+  this.recubierto = recubierto
 }
 
+const torta1 = new torta("torta kakita", "relleno con dulce de leche y oreo", "4 kg", "ganacheada de chocolate" )
+const torta2 = new torta("torta campeon", "relleno con dulce de leche y fruta a eleccion", "3 kg", "masa dulce")
+const torta3 = new torta("torta duff", "relleno con dulce de leche y frutilla", "3 kg", "masa dulce")
+const torta4 = new torta("torta dj", "relleno con dulce de leche y chips de chocolate", "6 kg", "masa dulce")
 
+const tortaarrays = [torta1]
 
-function valorfinal (){
-  const resultado = totalcompra * descuento
-  return resultado
-}
+console.log (tortaarrays)
 
-valorfinal (totalcompra)
-alert('valor final es' + valorfinal)
-
-*/
 
