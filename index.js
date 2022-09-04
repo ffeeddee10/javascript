@@ -43,23 +43,46 @@ let cash = parseInt(
   prompt('¿Paga en Efectivo? si - no')
 )
 
+function calculandodescuento(precio) {
 
-let descuento = 0
+  let descuento
 
-if (cash === 'si') {
-  descuento = descuento + 0.9
+  if (cash == 'si') {
+    descuento = 0.9
+  }
+  else if (cash == 'no') {
+    descuento = 0
+  }
+  else {
+    cash = parseInt(prompt('ingrese un numero valido'))
+  }
+  let resultado = precio * descuento
+  precio = precio + resultado
+  return precio
 }
-else if (cash === 'no') {
-  descuento = descuento + 0
-}
-else {
-  cash = parseInt(prompt('ingrese un numero valido'))
-}
+let preciofinal = calculandodescuento(totalcompra)
 
-let resultado = totalcompra * descuento
 
-alert('valor final es ' + resultado)
 
+alert('valor final es ' + preciofinal)
+
+/*
+function calcularImpuestos(precio) {
+  let impuesto = 0 
+  if (precio <= 300) {
+     impuesto = 10 } 
+     else if (precio >= 400 || precio <= 700) {
+       impuesto = 20 } 
+       else if (precio >= 800) {
+         impuesto = 25 } 
+         else { 
+          alert(“guau no puedo calcular los impuestos”) 
+        } let valorDelImpuesto = precio * (impuesto / 100) 
+        precio = precio + valorDelImpuesto return precio }
+let valorConImpuesto = calcularImpuestos(precioTotal)
+
+alert(“el valor de tu producto con impuestos incluidos es de”+valorConImpuesto)
+*/
 
 /*
 
