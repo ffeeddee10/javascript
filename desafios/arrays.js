@@ -1,11 +1,12 @@
 class tortas{
-    constructor (nombre, relleno, kilos, recubierto){
+    constructor (nombre, relleno, kilos, recubierto, opinion){
         this.nombre = nombre
         this.relleno = relleno
         this.kilos = kilos
         this.recubierto = recubierto
     }
 }
+
 
 const torta = []
 const torta1 = new tortas("torta kakita", "relleno con dulce de leche y oreo", "4 kg", "ganacheada de chocolate")
@@ -19,52 +20,11 @@ torta.push(torta4)
 
 console.log(torta)
 
-//busco mi torta
+//agregarndo ideas de clientes a nuestra base de datos de tortas
 
-const elecciontorta = prompt('¿decime que relleno te gustaria en nuestras tortas?')
-torta.push(elecciontorta)
+const opinion = prompt('¿danos una idea para crear una torta?')
+torta.push(opinion)
 
-/*
-let eleccion = torta.indexOf(elecciontorta)
-
-console.log(eleccion)
-*/
+alert ( 'tu idea ' + opinion + ' sera analizada')
 
 
-/*
-let buscandotorta = tortas.incluides(elecciontorta)
-let indice = tortas.indexOf(elecciontorta)
-
-if(buscandotorta){
-    alert('si esta')
-} else {
-    alert('no esta')
-}
-*/
-/*
-const elecciontorta = parseInt(prompt('¿que modelo de torta buscas?'))
-
-const existelatorta = torta.find(
-    (tor) => tor.id === elecciontorta 
-)
-*/
-
-/*
-let elecciontorta = parseInt(prompt('¿que torta estas buscando?'));
-
-let existetorta = tortas.incluide(elecciontorta);
-
-let indice = tortas.index0f(elecciontorta);
-
-if(existetorta) {
-    alert('la torta buscada es ${indice}')
-} else {
-    alert('la torta no se encuentra en nuestra busqueda')
-}
-*/
-
-/*
-tortaarrays.push(comentariocliente)
-
-console.log(tortaarrays) 
-*/

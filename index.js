@@ -65,20 +65,3 @@ let preciofinal = calculandodescuento(totalcompra)
 alert('tu compra total es ' + preciofinal)
 
 
-function tortas (nombre, relleno, kilos, recubierto) {
-  this.nombre = nombre
-  this.relleno = relleno
-  this.kilos = kilos
-  this.recubierto = recubierto
-}
-
-const torta1 = new torta("torta kakita", "relleno con dulce de leche y oreo", "4 kg", "ganacheada de chocolate" )
-const torta2 = new torta("torta campeon", "relleno con dulce de leche y fruta a eleccion", "3 kg", "masa dulce")
-const torta3 = new torta("torta duff", "relleno con dulce de leche y frutilla", "3 kg", "masa dulce")
-const torta4 = new torta("torta dj", "relleno con dulce de leche y chips de chocolate", "6 kg", "masa dulce")
-
-const tortaarrays = [torta1]
-
-console.log (tortaarrays)
-
-
