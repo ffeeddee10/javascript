@@ -22,13 +22,13 @@ console.log(torta)
 
 //buscador
 
-let busqueda = prompt('¿que torta estas buscando?')
-const buscador = torta.find(objeto=>objeto.nombre = busqueda)
+let busqueda = prompt('¿Que Torta estas buscando de nuestros modelos?')
+const buscador = torta.find(objeto=>objeto.nombre == busqueda)
 
 if(buscador) {
-    alert('tenemos el producto '+busqueda)
+    alert('tenemos ese modelo de '+busqueda)
 } else{
-    alert('no tenemos esa producto')
+    alert('no tenemos ese modelo, Pero se puede Diseñar a tu gusto, Contactanos')
 }
 
 

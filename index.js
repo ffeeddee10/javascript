@@ -1,7 +1,7 @@
 
 
 let productoseleccionado = parseInt(
-  prompt('ingresa el numero del producto a elejir 1-torta 2-galletitas 3-git box')
+  prompt('Ingresa el numero del producto a elejir 1-torta 2-galletitas 3-git box')
 )
 
 
@@ -10,6 +10,25 @@ let totalcompra = 0
 
 let seguircomprando = true
 let desicion
+
+
+
+class productos {
+  constructor(nombre, valor) {
+    this.nombre = nombre
+    this.valor = valor
+  }
+}
+const producto = []
+const productotorta = new productos("Valor Por KG de torta", "3000")
+producto.push(productotorta)
+const productogalletitas = new productos("Valor Por KG de galletitas", "1000")
+producto.push(productogalletitas)
+const productogifbox = new productos("Valor Por Caja", "4000")
+producto.push(productogifbox)
+
+console.log(producto)
+
 
 while (seguircomprando === true) {
   if (productoseleccionado === 1) {
