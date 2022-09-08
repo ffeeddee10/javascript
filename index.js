@@ -1,4 +1,44 @@
 
+//EN LA WEB SE LE MUESTRA UNA SERIE DE FOTOS CON DISEÑO DE TORTAS CON SU RESPECTIVO NOMBRE, SE LE PREGUNTARA SI SU DISEÑO
+// ESTA DISPONIBLE
+
+class tortas {
+  constructor(nombre, relleno, kilos, recubierto, opinion) {
+    this.nombre = nombre
+    this.relleno = relleno
+    this.kilos = kilos
+    this.recubierto = recubierto
+  }
+}
+
+
+const torta = []
+const torta1 = new tortas("torta kakita", "relleno con dulce de leche y oreo", "4 kg", "ganacheada de chocolate")
+torta.push(torta1)
+const torta2 = new tortas("torta campeon", "relleno con dulce de leche y fruta a eleccion", "3 kg", "masa dulce")
+torta.push(torta2)
+const torta3 = new tortas("torta duff", "relleno con dulce de leche y frutilla", "3 kg", "masa dulce")
+torta.push(torta3)
+const torta4 = new tortas("torta dj", "relleno con dulce de leche y chips de chocolate", "6 kg", "masa dulce")
+torta.push(torta4)
+
+console.log(torta)
+
+// BUSCADOR DE DISEÑO DE TORTAS
+
+let busqueda = prompt('¿Que Torta estas buscando de nuestros modelos?')
+const buscador = torta.find(objeto => objeto.nombre == busqueda)
+
+if (buscador) {
+  alert('tenemos ese modelo de ' + busqueda)
+} else {
+  alert('no tenemos ese modelo, Pero se puede Diseñar a tu gusto, Contactanos')
+}
+
+
+
+
+//ELECCION DE DIFERENTES PRODUCTOS CARACTERISTICOS Y SU POSTERIOR PRECIO
 
 let productoseleccionado = parseInt(
   prompt('Ingresa el numero del producto a elejir 1-torta 2-galletitas 3-git box')
@@ -6,12 +46,9 @@ let productoseleccionado = parseInt(
 
 
 let totalcompra = 0
-
-
 let seguircomprando = true
 let desicion
-
-
+let carrito = []
 
 class productos {
   constructor(nombre, valor) {
@@ -30,15 +67,18 @@ producto.push(productogifbox)
 console.log(producto)
 
 
+// DUDA QUISE IMPREMENTAR UNA FORMA DIFERENTE DE USAR ARRAY, PERO ME SUMA UN "0" DELANTE DE MI CALCULO, 
+//PERO EL PRECIO FINAL SI ESTA CORRECTAMENTE CALCULADO
+
 while (seguircomprando === true) {
   if (productoseleccionado === 1) {
-    totalcompra = totalcompra + 3000
+    carrito.push(productos[0]) 
   }
   else if (productoseleccionado === 2) {
-    totalcompra = totalcompra + 1000
+     carrito.push(producto[1])
   }
   else if (productoseleccionado === 3) {
-    totalcompra = totalcompra + 5000
+    carrito.push(productos[2])
   }
   else {
 
@@ -53,10 +93,15 @@ while (seguircomprando === true) {
   else if (desicion === 2) {
     seguircomprando = false
   }
-
-
 }
+
+for (const prod of carrito) {
+  totalCompra = totalCompra + prod.precio
+}
+
 alert('el valor es ' + totalcompra)
+
+
 
 let cash = prompt('¿Paga en Efectivo? si - no')
 
