@@ -64,21 +64,18 @@ producto.push(productogalletitas)
 const productogifbox = new productos("Valor Por Caja", "4000")
 producto.push(productogifbox)
 
-console.log(producto)
 
-
-// DUDA QUISE IMPREMENTAR UNA FORMA DIFERENTE DE USAR ARRAY, PERO ME SUMA UN "0" DELANTE DE MI CALCULO, 
-//PERO EL PRECIO FINAL SI ESTA CORRECTAMENTE CALCULADO
+// elijiendo productos
 
 while (seguircomprando === true) {
   if (productoseleccionado === 1) {
-    carrito.push(productos[0]) 
+    carrito.push(producto[0])
   }
   else if (productoseleccionado === 2) {
-     carrito.push(producto[1])
+    carrito.push(producto[1])
   }
   else if (productoseleccionado === 3) {
-    carrito.push(productos[2])
+    carrito.push(producto[2])
   }
   else {
 
@@ -93,14 +90,14 @@ while (seguircomprando === true) {
   else if (desicion === 2) {
     seguircomprando = false
   }
-}
+};
 
-for (const prod of carrito) {
-  totalCompra = totalCompra + prod.precio
-}
+//calculadora de productos comprados
 
+for (const produc of carrito) {
+  totalcompra = produc.valor + totalcompra
+}
 alert('el valor es ' + totalcompra)
-
 
 
 let cash = prompt('¿Paga en Efectivo? si - no')
